@@ -1,0 +1,473 @@
+:root {
+    /* Soft Industrial Palette - Comfortable yet Technical */
+    --bg:      oklch(94% 0.008 250); 
+    --surface: #F0F2F5;
+    --fg:      oklch(15% 0.02 250); 
+    --muted:   oklch(50% 0.02 250);
+    --border:  oklch(90% 0.01 250);
+    --accent:  #FF5722; 
+    --accent-soft: rgba(255, 87, 34, 0.15);
+
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body:    'Inter', sans-serif;
+    --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+    
+    --max-width: 90%;
+    --radius-lg: 32px;
+    --radius-md: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+/* Helper for Favicon */
+.brand-icon {
+    height: 0.9em;
+    vertical-align: middle;
+    margin-right: 8px;
+    display: inline-block;
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+header {
+    padding: 3vh 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(240, 242, 245, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wordmark {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--fg);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-links a { color: var(--fg); text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
+.nav-links a:hover { opacity: 1; color: var(--accent); }
+
+.github-icon {
+    width: 22px;
+    height: 22px;
+    fill: var(--fg);
+    transition: transform 0.2s ease;
+}
+.github-icon:hover { transform: scale(1.1); fill: var(--accent); }
+
+/* Problem Section / Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15vh 0 10vh;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    align-items: flex-start;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    margin-bottom: 20px;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    max-width: 900px;
+    text-wrap: balance;
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--fg);
+    margin-bottom: 24px;
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-bottom: 32px;
+    max-width: 90%;
+    font-weight: 500;
+}
+
+.hero-terminal-pills {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.terminal-pill {
+    flex: 1;
+    background: rgba(240, 242, 245, 0.5);
+    border: 1px solid var(--border);
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--fg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    margin-bottom: 48px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+    border: 1px solid rgba(240, 242, 245, 0.8);
+    background: var(--surface);
+    padding: 16px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: calc(var(--radius-lg) - 8px);
+}
+
+/* Section 2: HexySAR & Key Features */
+.mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vh 4vw;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    margin: 5vh 0;
+}
+
+.split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    align-items: center;
+}
+
+.mission h2 { font-size: 3.5rem; margin-bottom: 24px; letter-spacing: -0.04em; }
+.mission p { font-size: 1.2rem; color: var(--muted); font-weight: 500; margin-bottom: 32px; }
+
+.btn-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent);
+    color: var(--surface);
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    box-shadow: 0 10px 25px var(--accent-soft);
+    border: 2px solid var(--accent);
+}
+.btn-primary:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 15px 35px var(--accent-soft);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    color: var(--fg);
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid var(--border);
+    gap: 12px;
+}
+.btn-secondary:hover {
+    border-color: var(--fg);
+}
+
+.hf-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.mission-image {
+    width: 100%;
+    height: 500px;
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    background-image: url('mozhm15m-image.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    margin-top: 40px;
+}
+
+/* How it Operates */
+.operates {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12vh 0;
+    text-align: center;
+}
+
+.operates h2 {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.step-box {
+    flex: 1;
+    background: var(--surface);
+    padding: 40px 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+}
+
+.step-num {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* Tech Stack */
+.tech {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vh 4vw;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    margin-bottom: 5vh;
+}
+
+.tech-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    margin-top: 40px;
+}
+
+.tech-item {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+.tech-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.tech-item p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Setup (Terminal) */
+.setup {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12vh 0 15vh;
+}
+
+.terminal {
+    background: #fafafa;
+    color: #333;
+    padding: 24px 32px 32px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    line-height: 1.8;
+    margin-top: 40px;
+}
+
+.terminal-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.t-prompt { color: #27c93f; font-weight: 700; margin-right: 8px; }
+.t-cmd { color: #111; font-weight: 500; }
+.t-accent { color: var(--accent); font-weight: 700; }
+.t-comment { color: #888; }
+.t-title { color: #888; font-size: 0.75rem; font-weight: 600; margin-left: 16px; }
+
+/* Footer */
+footer {
+    padding: 60px 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 48px;
+}
+
+.footer-links a {
+    color: var(--fg);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
+
+.copyright {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .hero h1, .mission h2, .operates h2 { font-size: 3rem; }
+    .features, .split-grid, .grid-2, .tech-lists, .steps-container { grid-template-columns: 1fr; flex-direction: column; gap: 40px; }
+    .nav-links { display: none; }
+    .mission-image { height: 400px; aspect-ratio: auto; }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexy</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Google Fonts: Plus Jakarta Sans for strength & Inter for support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="wordmark">
+                    <img src="favicon.png" alt="Hexy Logo" class="brand-icon"> Hexy
+                </a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#how-it-operates">Operates</a>
+                    <a href="#tech">Tech Stack</a>
+                    <a href="#setup">Setup</a>
+                    <a href="https://github.com/AMD-Hackathon-ISPM/hexy" target="_blank" aria-label="GitHub">
+                        <svg class="github-icon" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Keunggulan Hexy -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Autonomous Rescue.<br><span class="text-accent">High Precision. Zero Risk.</span></h1>
+                    <p class="hero-subtitle"><strong>Connect human rescue teams with highly capable autonomous robots to navigate treacherous subterranean environments.</strong></p>
+                    <div class="hero-stats" style="margin-top: 48px;">
+                        <div class="stat-item">
+                            <span class="stat-value">99%</span>
+                            <span class="stat-label">AI PRECISION</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">10s - 30s</span>
+                            <span class="stat-label">FAST BOOT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual" style="flex-direction: column; gap: 32px; align-items: center; justify-content: flex-start;">
+                    <div class="hero-image-wrapper" style="width: 100%;">
+                        <img src="mozhma3q-image.png" alt="Hexy System" class="hero-image">
+                    </div>
+                    
+                    <div class="btn-group hero-buttons" style="margin-bottom: 0; align-self: flex-start;">
+                        <a href="https://github.com/AMD-Hackathon-ISPM/hexy" target="_blank" class="btn-primary">
+                            <svg class="github-icon" style="width:20px; height:20px; fill:currentColor; margin-right:8px;" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub
+                        </a>
+                        <a href="https://huggingface.co/LeBabyOx/dino-cave-survivor" target="_blank" class="btn-secondary">
+                            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face Logo" class="hf-icon">
+                            Model
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Hexy Intro -->
+        <section class="container" id="about">
+            <div class="mission">
+                <div class="split-grid">
+                    <div>
+                        <h2><img src="favicon.png" alt="Hexy Logo" class="brand-icon" style="height: 0.8em;">Hexy</h2>
+                        <p style="font-weight: 700; color: var(--fg); margin-bottom: 12px;">Multimodal Search-and-Rescue Hexapod in Cave Environments</p>
+                        <p>AI robot that searches dangerous caves before humans have to.</p>
+
+                        <div class="grid-2">
+                            <div>
+                                <h4>Autonomous Cave Exploration</h4>
+                                <p style="font-size: 0.95rem;">Navigates unknown terrain without human guidance</p>
+                            </div>
+                            <div>
+                                <h4>Multimodal Survivor Detection</h4>
+                                <p style="font-size: 0.95rem;">Visual and audio sensing for comprehensive search</p>
+                            </div>
+                            <div>
+                                <h4>Noise-Triggered Investigation</h4>
+                                <p style="font-size: 0.95rem;">Moves toward suspicious sounds automatically</p>
+                            </div>
+                            <div>
+                                <h4>Real-Time Mapping</h4>
+                                <p style="font-size: 0.95rem;">Generates safe paths for human rescuers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission-image"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: How it Operates -->
+        <section class="operates container" id="how-it-operates">
+            <h2>How <img src="favicon.png" alt="Hexy Logo" class="brand-icon">Hexy Operates</h2>
+            
+            <div class="steps-container">
+                <div class="step-box">
+                    <span class="step-num">1</span>
+                    <h3>Human Instructions</h3>
+                    <p>Chat-based command interface.</p>
+                </div>
+                <div class="step-box">
+                    <span class="step-num">2</span>
+                    <h3>Autonomous Execution</h3>
+                    <p>Self-directed exploration and decision-making.</p>
+                </div>
+                <div class="step-box">
+                    <span class="step-num">3</span>
+                    <h3>Rescue Intelligence</h3>
+                    <p>Safe paths delivered to teams.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Tech Stack -->
+        <section class="container" id="tech">
+            <div class="tech">
+                <h2>Tech Stack</h2>
+                <div class="tech-lists">
+                    <div>
+                        <h3 style="margin-bottom: 32px; font-size: 1.5rem;">Back-End Stack</h3>
+                        <div class="tech-item">
+                            <h4>Grounding DINO</h4>
+                            <p>Survivor detection with precision 0.227 and recall 0.488</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Whisper</h4>
+                            <p>Audio understanding for noise detection</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Qwen2.5-VL</h4>
+                            <p>Multimodal reasoning engine</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>MuJoCo + Brax</h4>
+                            <p>Physics simulation for training</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Docker Compose</h4>
+                            <p>Deployment orchestration</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Front-End Stack Infrastructure</h3>
+                        <p style="margin-bottom: 32px; color: var(--muted); font-size: 0.95rem;">Optimized for AMD GPU cloud deployment with parallel processing for real-time inference</p>
+                        
+                        <div class="tech-item">
+                            <h4>React + Vite</h4>
+                            <p>Chat interface and control panel</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Three.js</h4>
+                            <p>Real-time 3D visualization</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>MuJoCo WASM</h4>
+                            <p>Browser-based simulation viewer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Setup (Terminal) -->
+        <section class="setup container" id="setup">
+            <h2>Ready for initialization.</h2>
+            
+            <div class="grid-2">
+                <div class="terminal" style="margin-top: 0;">
+                    <div class="terminal-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                        <span class="t-title">terminal - hexy setup</span>
+                    </div>
+                    <span class="t-comment"># Persiapan Awal: Download <img src="favicon.png" alt="Hexy Logo" class="brand-icon" style="height: 0.8em; margin: 0;">Hexy core stack</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">git clone https://github.com/AMD-Hackathon-ISPM/hexy</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">cd hexy</span><br><br>
+                    
+                    <span class="t-comment"># METODE 1: Dengan Docker (Default)</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">docker compose up --build</span>
+                </div>
+
+                <div class="terminal" style="margin-top: 0;">
+                    <div class="terminal-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                        <span class="t-title">terminal - local dev</span>
+                    </div>
+                    <span class="t-comment"># Persiapan Awal: Download <img src="favicon.png" alt="Hexy Logo" class="brand-icon" style="height: 0.8em; margin: 0;">Hexy core stack</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">git clone https://github.com/AMD-Hackathon-ISPM/hexy</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">cd hexy</span><br><br>
+                    <span class="t-comment"># METODE 2: Tanpa Docker (Local Development)</span><br>
+                    <span class="t-comment"># Terminal 1 (Backend):</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">cd backend</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">pip install -r requirements.txt</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">uvicorn app.main:app --reload</span> <br>
+                    <span class="t-comment"># serves on http://localhost:8000</span><br><br>
+                    
+                    <span class="t-comment"># Terminal 2 (Frontend):</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">cd frontend</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">npm install</span><br>
+                    <span class="t-prompt">$</span> <span class="t-cmd">npm run dev</span> <br>
+                    <span class="t-comment"># serves on http://localhost:5173</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="wordmark">
+                    <img src="favicon.png" alt="Hexy Logo" class="brand-icon"> Hexy
+                </div>
+                <div class="copyright">© 2026 HEXY // SINGKONG TEAM</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
