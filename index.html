@@ -17,7 +17,7 @@
         <div class="container">
             <nav>
                 <a href="#" class="wordmark">
-                    <img src="favicon.png" alt="Hexy Logo" class="brand-icon"> Hexy
+                    Hexy
                 </a>
                 <div class="nav-links">
                     <a href="#about">About</a>
@@ -75,7 +75,7 @@
             <div class="mission">
                 <div class="split-grid">
                     <div>
-                        <h2><img src="favicon.png" alt="Hexy Logo" class="brand-icon" style="height: 0.8em;">Hexy</h2>
+                        <h2>Hexy</h2>
                         <p style="font-weight: 700; color: var(--fg); margin-bottom: 12px;">Multimodal Search-and-Rescue Hexapod in Cave Environments</p>
                         <p>AI robot that searches dangerous caves before humans have to.</p>
 
@@ -105,7 +105,7 @@
 
         <!-- Section 3: How it Operates -->
         <section class="operates container" id="how-it-operates">
-            <h2>How <img src="favicon.png" alt="Hexy Logo" class="brand-icon">Hexy Operates</h2>
+            <h2>How Hexy Operates</h2>
             
             <div class="steps-container">
                 <div class="step-box">
@@ -150,25 +150,31 @@
                             <p>Physics simulation for training</p>
                         </div>
                         <div class="tech-item">
-                            <h4>Docker Compose</h4>
+                            <h4>Docker + Docker Compose</h4>
                             <p>Deployment orchestration</p>
                         </div>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Front-End Stack Infrastructure</h3>
-                        <p style="margin-bottom: 32px; color: var(--muted); font-size: 0.95rem;">Optimized for AMD GPU cloud deployment with parallel processing for real-time inference</p>
-                        
+                        <h3 style="margin-bottom: 32px; font-size: 1.5rem;">Front-End Stack</h3>
                         <div class="tech-item">
-                            <h4>React + Vite</h4>
+                            <h4>React + Typescript + Vite</h4>
                             <p>Chat interface and control panel</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Tailwind</h4>
+                            <p>Utility-first CSS styling for fast, consistent UI design</p>
                         </div>
                         <div class="tech-item">
                             <h4>Three.js</h4>
                             <p>Real-time 3D visualization</p>
                         </div>
                         <div class="tech-item">
-                            <h4>MuJoCo WASM</h4>
+                            <h4>MuJoCo React</h4>
                             <p>Browser-based simulation viewer</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>React Three Fiber</h4>
+                            <p>Interactive 3D rendering for immersive visualization</p>
                         </div>
                     </div>
                 </div>
@@ -178,45 +184,66 @@
         <!-- Section 5: Setup (Terminal) -->
         <section class="setup container" id="setup">
             <h2>Ready for initialization.</h2>
+            <br>
             
-            <div class="grid-2">
-                <div class="terminal" style="margin-top: 0;">
+            <div class="setup-wrapper">
+                <!-- Row 1: Initial Setup -->
+                <div class="terminal" style="margin-top: 0; margin-bottom: 32px;">
                     <div class="terminal-header">
                         <div class="dot red"></div>
                         <div class="dot yellow"></div>
                         <div class="dot green"></div>
                         <span class="t-title">terminal - hexy setup</span>
                     </div>
-                    <span class="t-comment"># Initial Setup: Download <img src="favicon.png" alt="Hexy Logo" class="brand-icon" style="height: 0.8em; margin: 0;">Hexy core stack</span><br>
+                    <span class="t-comment"># Initial Setup: Download Hexy core stack</span><br>
                     <span class="t-prompt">$</span> <span class="t-cmd">git clone https://github.com/AMD-Hackathon-ISPM/hexy</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">cd hexy</span><br><br>
-                    
-                    <span class="t-comment"># METHOD 1: With Docker (Default)</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">docker compose up --build</span>
+                    <span class="t-prompt">$</span> <span class="t-cmd">cd hexy</span>
                 </div>
 
-                <div class="terminal" style="margin-top: 0;">
-                    <div class="terminal-header">
-                        <div class="dot red"></div>
-                        <div class="dot yellow"></div>
-                        <div class="dot green"></div>
-                        <span class="t-title">terminal - local dev</span>
+                <!-- Row 2: Download Model -->
+                <div class="download-banner">
+                    <div class="download-text">
+                        <h3>Download Required Model</h3>
+                        <p>Extract the model into the root folder before proceeding with the execution methods below.</p>
                     </div>
-                    <span class="t-comment"># Initial Setup: Download <img src="favicon.png" alt="Hexy Logo" class="brand-icon" style="height: 0.8em; margin: 0;">Hexy core stack</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">git clone https://github.com/AMD-Hackathon-ISPM/hexy</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">cd hexy</span><br><br>
-                    <span class="t-comment"># METHOD 2: Without Docker (Local Development)</span><br>
-                    <span class="t-comment"># Terminal 1 (Backend):</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">cd backend</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">pip install -r requirements.txt</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">uvicorn app.main:app --reload</span> <br>
-                    <span class="t-comment"># serves on http://localhost:8000</span><br><br>
-                    
-                    <span class="t-comment"># Terminal 2 (Frontend):</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">cd frontend</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">npm install</span><br>
-                    <span class="t-prompt">$</span> <span class="t-cmd">npm run dev</span> <br>
-                    <span class="t-comment"># serves on http://localhost:5173</span>
+                    <a href="https://drive.google.com/file/d/1AOns_bZGLbrnlYZFbRv-Sieed4Aipxe6/view?usp=sharing" target="_blank" class="btn-primary">
+                        Download Model
+                    </a>
+                </div>
+
+                <!-- Row 3: Execution Methods -->
+                <div class="grid-2">
+                    <div class="terminal" style="margin-top: 0; height: 100%;">
+                        <div class="terminal-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                            <span class="t-title">terminal - docker</span>
+                        </div>
+                        <span class="t-comment"># METHOD 1: With Docker (Default)</span><br>
+                        <span class="t-prompt">$</span> <span class="t-cmd">docker compose up --build</span>
+                    </div>
+
+                    <div class="terminal" style="margin-top: 0; height: 100%;">
+                        <div class="terminal-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                            <span class="t-title">terminal - local dev</span>
+                        </div>
+                        <span class="t-comment"># METHOD 2: Without Docker (Local Development)</span><br>
+                        <span class="t-comment"># Terminal 1 (Backend):</span><br>
+                        <span class="t-prompt">$</span> <span class="t-cmd">cd backend</span><br>
+                        <span class="t-prompt">$</span> <span class="t-cmd">pip install -r requirements.txt</span><br>
+                        <span class="t-prompt">$</span> <span class="t-cmd">uvicorn app.main:app --reload</span> <br>
+                        <span class="t-comment"># serves on http://localhost:8000</span><br><br>
+                        
+                        <span class="t-comment"># Terminal 2 (Frontend):</span><br>
+                        <span class="t-prompt">$</span> <span class="t-cmd">cd frontend</span><br>
+                        <span class="t-prompt">$</span> <span class="t-cmd">npm install</span><br>
+                        <span class="t-prompt">$</span> <span class="t-cmd">npm run dev</span> <br>
+                        <span class="t-comment"># serves on http://localhost:5173</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -226,7 +253,7 @@
         <div class="container">
             <div class="footer-wrap">
                 <div class="wordmark">
-                    <img src="favicon.png" alt="Hexy Logo" class="brand-icon"> Hexy
+                    Hexy
                 </div>
                 <div class="copyright">© 2026 HEXY // SINGKONG TEAM</div>
             </div>
